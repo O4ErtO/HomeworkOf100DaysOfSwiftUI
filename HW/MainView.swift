@@ -29,7 +29,7 @@ struct MainView: View {
                     GameGuesTheFlag()
                 } label: {
                     Image(systemName: "gamecontroller")
-                    Text("Guess the country flag 🏳️‍🌈")
+                    Text("  🏳️‍🌈")
                 }
                 NavigationLink{
                     BetterRest()
@@ -51,7 +51,13 @@ struct MainView: View {
                 Text("Word Scramble")
                     
                 }
-                
+                NavigationLink{
+                    GameCalculator()
+                }label: {
+                    Image(systemName: "gamecontroller")
+
+                    Text("Game calculator")
+                }
                 
             }.navigationTitle("Homework")
         }
