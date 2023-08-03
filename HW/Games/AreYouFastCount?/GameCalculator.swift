@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct GameCalculator: View {
+    @State private var currentQuestion = 0
+    let numberOfQuestions: Int
     @State private var multiplicationTable: Int = 2
     @State private var firstNumber: Int = 0
     @State private var secondNumber: Int = 0
@@ -19,67 +21,80 @@ struct GameCalculator: View {
     @State private var showingAlert = false
     @State private var wrongAnswer = false
     @State private var checkWrongAnswers = false
+   
     var body: some View {
         VStack {
-            Spacer()
-            Text("Multiplication Game")
-                .font(.title)
-                .fontWeight(.bold)
-            
-            Text("Score: \(score)")
-                .font(.largeTitle)
-                .padding()
-            
-            Text("\(firstNumber) x \(secondNumber) = \(checkWrongAnswers ? String(correctAnswer) : "?")")
-                .font(.largeTitle)
-                .frame(width: 200, height: 100)
-                .padding()
+            if currentQuestion <= numberOfQuestions{
+                Text("Вопрос \(currentQuestion)")
+                Spacer()
+                Text("Multiplication Game")
+                    .font(.title)
+                    .fontWeight(.bold)
                 
-            Spacer()
-       
-            VStack {
-                LazyVGrid(
-                    columns: [
-                        GridItem(.flexible(), spacing: 40),
-                        GridItem(.flexible(), spacing: 40)
-                    ],
-                    spacing: 10
-                ) {
-                    
-                    ForEach(options, id: \.self) { option in
-                        Button(action: {
-                            checkAnswer(option)
-                        }) {
-                            Text("\(option)")
-                                .font(.title)
+                Text("Score: \(score)")
+                    .font(.largeTitle)
+                    .padding()
+                
+                Text("\(firstNumber) x \(secondNumber) = \(checkWrongAnswers ? String(correctAnswer) : "?")")
+                    .font(.largeTitle)
+                    .frame(width: 200, height: 100)
+                    .padding()
+                
+                Spacer()
+                
+                VStack {
+                    LazyVGrid(
+                        columns: [
+                            GridItem(.flexible(), spacing: 40),
+                            GridItem(.flexible(), spacing: 40)
+                        ],
+                        spacing: 10
+                    ) {
+                        
+                        ForEach(options, id: \.self) { option in
+                            Button(action: {
+                                checkAnswer(option)
+                            }) {
+                                Text("\(option)")
+                                    .font(.title)
                                 
-                                .frame(width: 190, height: 85)
+                                    .frame(width: 190, height: 85)
                                 
-                                .foregroundColor(.white)
-                                .background(selectedOption ? (correctAnswer == option ? .green : .gray) :  (checkWrongAnswers ? (option != correctAnswer ? .red : .green)  : .gray))
-                                .animation(.easeInOut(duration: 1))
-                                .clipShape(Rectangle())
-                                .cornerRadius(20)
+                                    .foregroundColor(.white)
+                                    .background(selectedOption ? (correctAnswer == option ? .green : .gray) :  (checkWrongAnswers ? (option != correctAnswer ? .red : .green)  : .gray))
+                                    .animation(.easeInOut(duration: 1))
+                                    .clipShape(Rectangle())
+                                    .cornerRadius(20)
                                 
-                            
+                                
+                            }
                         }
-                    }
-                }.padding()
-            }.animation(.easeIn(duration: 1))
-            Spacer()
-            Button(action: {
-                generateQuestion()
-            }) {
-                Text("Next Question")
+                    }.padding()
+                }.animation(.easeIn(duration: 1))
+                Spacer()
+                Button(action: {
+                    generateQuestion()
+                }) {
+                    Text("Next Question")
+                        .font(.title)
+                        .padding()
+                        .background(Color.green)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                    
+                }
+                
+                .padding()
+            } else {
+                Text("Игра окончена!")
                     .font(.title)
                     .padding()
-                    .background(Color.green)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                   
+                Text("Счет: \(score) / \(numberOfQuestions)")
+                    .font(.headline)
+                    .padding()
             }
             
-            .padding()
+            
         }.alert(alertTitle, isPresented: $showingAlert){
             Button("Next question ->", action: generateQuestion)
         } message:{
@@ -107,6 +122,7 @@ struct GameCalculator: View {
         options = generateAnswerOptions()
         selectedOption = false
         checkWrongAnswers = false
+        currentQuestion += 1
     }
     
     func generateAnswerOptions() -> [Int] {
@@ -120,13 +136,16 @@ struct GameCalculator: View {
         options.shuffle()
         return options
     }
-    
+    func nextQuestion() {
+           currentQuestion += 1
+       }
     func checkAnswer(_ option: Int) {
         if option == correctAnswer {
             score += 1
             selectedOption = true
             alertTitle = "Correct!"
             showingAlert = true
+            
         }else{
             alertTitle = "Wrong"
             wrongAnswer = true
@@ -135,8 +154,4 @@ struct GameCalculator: View {
     }
 }
 
-struct MultiplicationGameView_Previews: PreviewProvider {
-    static var previews: some View {
-        GameCalculator()
-    }
-}
+

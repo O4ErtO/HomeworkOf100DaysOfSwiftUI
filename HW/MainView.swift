@@ -52,7 +52,7 @@ struct MainView: View {
                     
                 }
                 NavigationLink{
-                    GameCalculator()
+                    KKK()
                 }label: {
                     Image(systemName: "gamecontroller")
 

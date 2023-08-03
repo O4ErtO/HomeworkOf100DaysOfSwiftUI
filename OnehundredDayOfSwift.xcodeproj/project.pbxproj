@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA3953602A76AE03006A6640 /* GameCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA39535F2A76AE03006A6640 /* GameCalculator.swift */; };
 		FA7C26B52A716AF000E57D27 /* SleepCalculate.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FA7C269F2A716AF000E57D27 /* SleepCalculate.mlmodel */; };
 		FA7C26B62A716AF000E57D27 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7C26A02A716AF000E57D27 /* Preview Assets.xcassets */; };
 		FA7C26B72A716AF000E57D27 /* Error.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FA7C26A12A716AF000E57D27 /* Error.pdf */; };
@@ -21,9 +22,11 @@
 		FA7C26C02A716AF000E57D27 /* BetterRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7C26AF2A716AF000E57D27 /* BetterRest.swift */; };
 		FA7C26C12A716AF000E57D27 /* VolumeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7C26B02A716AF000E57D27 /* VolumeCalculator.swift */; };
 		FA7C26C22A716AF000E57D27 /* WeSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7C26B12A716AF000E57D27 /* WeSplitView.swift */; };
+		FACD20DE2A7B989F006DAC95 /* ChooseAQuestionsStartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD20DD2A7B989F006DAC95 /* ChooseAQuestionsStartPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA39535F2A76AE03006A6640 /* GameCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCalculator.swift; sourceTree = "<group>"; };
 		FA3D55262A66B2F000A360E5 /* OnehundredDayOfSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnehundredDayOfSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7C269F2A716AF000E57D27 /* SleepCalculate.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SleepCalculate.mlmodel; sourceTree = "<group>"; };
 		FA7C26A02A716AF000E57D27 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -39,6 +42,7 @@
 		FA7C26AF2A716AF000E57D27 /* BetterRest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetterRest.swift; sourceTree = "<group>"; };
 		FA7C26B02A716AF000E57D27 /* VolumeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeCalculator.swift; sourceTree = "<group>"; };
 		FA7C26B12A716AF000E57D27 /* WeSplitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeSplitView.swift; sourceTree = "<group>"; };
+		FACD20DD2A7B989F006DAC95 /* ChooseAQuestionsStartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAQuestionsStartPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA39535E2A76AE03006A6640 /* AreYouFastCount? */ = {
+			isa = PBXGroup;
+			children = (
+				FA39535F2A76AE03006A6640 /* GameCalculator.swift */,
+				FACD20DD2A7B989F006DAC95 /* ChooseAQuestionsStartPage.swift */,
+			);
+			path = "AreYouFastCount?";
+			sourceTree = "<group>";
+		};
 		FA3D551D2A66B2F000A360E5 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +115,7 @@
 		FA7C26A52A716AF000E57D27 /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				FA39535E2A76AE03006A6640 /* AreYouFastCount? */,
 				FA7C26A62A716AF000E57D27 /* WordScramble */,
 				FA7C26A92A716AF000E57D27 /* GameRockPaperSiccors */,
 				FA7C26AB2A716AF000E57D27 /* GameFlag */,
@@ -217,11 +231,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3953602A76AE03006A6640 /* GameCalculator.swift in Sources */,
 				FA7C26BB2A716AF000E57D27 /* WordScramble.swift in Sources */,
 				FA7C26B82A716AF000E57D27 /* StartButton.swift in Sources */,
 				FA7C26BA2A716AF000E57D27 /* MainView.swift in Sources */,
 				FA7C26B92A716AF000E57D27 /* WeSplitApp.swift in Sources */,
 				FA7C26C12A716AF000E57D27 /* VolumeCalculator.swift in Sources */,
+				FACD20DE2A7B989F006DAC95 /* ChooseAQuestionsStartPage.swift in Sources */,
 				FA7C26C22A716AF000E57D27 /* WeSplitView.swift in Sources */,
 				FA7C26BF2A716AF000E57D27 /* GameGuesTheFlag.swift in Sources */,
 				FA7C26BD2A716AF000E57D27 /* GameRock.swift in Sources */,
@@ -368,6 +384,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -397,6 +414,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
