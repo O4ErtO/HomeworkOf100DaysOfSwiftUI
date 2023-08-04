@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 struct GameCalculator: View {
     @State private var currentQuestion = 0
     let numberOfQuestions: Int

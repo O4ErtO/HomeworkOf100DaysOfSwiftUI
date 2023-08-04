@@ -59,6 +59,12 @@ struct MainView: View {
                     Text("Game calculator")
                 }
                 
+                NavigationLink{
+                    iExpenseMainView()
+                }label: {
+                    Text("iExpense")
+                }
+                
             }.navigationTitle("Homework")
         }
     }
