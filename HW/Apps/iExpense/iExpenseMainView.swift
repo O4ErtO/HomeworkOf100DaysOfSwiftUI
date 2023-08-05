@@ -23,7 +23,8 @@ struct iExpenseMainView: View {
                           }
 
                           Spacer()
-                          Text(item.amount, format: .currency(code: "USD"))
+                        Text(item.amount, format: .currency(code: "USD"))
+                            .tint(item.amount < 10 ? .green : (item.amount < 100 ? .orange : .red))
                       }
                 }.onDelete(perform: removeItems)
             }.toolbar {
