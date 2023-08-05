@@ -60,11 +60,15 @@ struct MainView: View {
                 }
                 
                 NavigationLink{
-                    iExpenseMainView()
+                    ContentVieiw()
                 }label: {
                     Text("iExpense")
                 }
-                
+                NavigationLink{
+                    MoonShotView()
+                }label: {
+                    Text("MoonShot")
+                }
             }.navigationTitle("Homework")
         }
     }
