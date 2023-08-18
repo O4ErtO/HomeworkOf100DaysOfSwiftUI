@@ -42,6 +42,10 @@ struct IExpenseExtendedView: View {
     }
 }
 
-#Preview {
-    IExpenseExtendedView(expenses: Expenses())
+
+   
+struct IExpenseExtendedView_Previews: PreviewProvider {
+    static var previews: some View {
+        IExpenseExtendedView(expenses: Expenses())
+    }
 }

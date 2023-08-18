@@ -121,6 +121,8 @@ struct WordScramble: View {
     }
 }
 
-#Preview {
-    WordScramble()
+struct WordScramble_Previews: PreviewProvider {
+    static var previews: some View {
+        WordScramble()
+    }
 }

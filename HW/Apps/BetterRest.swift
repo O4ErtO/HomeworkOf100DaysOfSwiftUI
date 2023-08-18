@@ -75,8 +75,8 @@ struct BetterRest: View {
         showingAlert = true
     }
 }
-
-#Preview {
-    BetterRest()
+struct BetterRest_Previews: PreviewProvider {
+    static var previews: some View {
+        BetterRest()
+    }
 }
-
