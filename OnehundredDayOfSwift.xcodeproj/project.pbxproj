@@ -25,6 +25,9 @@
 		FA7C26C02A716AF000E57D27 /* BetterRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7C26AF2A716AF000E57D27 /* BetterRest.swift */; };
 		FA7C26C12A716AF000E57D27 /* VolumeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7C26B02A716AF000E57D27 /* VolumeCalculator.swift */; };
 		FA7C26C22A716AF000E57D27 /* WeSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7C26B12A716AF000E57D27 /* WeSplitView.swift */; };
+		FA8C6CC92A8FA73500713D28 /* Challenge79MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C6CC82A8FA73500713D28 /* Challenge79MainView.swift */; };
+		FA8C6CCB2A8FA74300713D28 /* Challenge79Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C6CCA2A8FA74300713D28 /* Challenge79Manager.swift */; };
+		FA8C6CCD2A8FA75300713D28 /* Challenge79Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C6CCC2A8FA75300713D28 /* Challenge79Model.swift */; };
 		FA948A192A7ED2D300C94AD1 /* MissionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA948A182A7ED2D300C94AD1 /* MissionsModel.swift */; };
 		FA948A1B2A7ED7C000C94AD1 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA948A1A2A7ED7C000C94AD1 /* ColorTheme.swift */; };
 		FA948A1D2A7ED94A00C94AD1 /* MissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA948A1C2A7ED94A00C94AD1 /* MissionsView.swift */; };
@@ -59,6 +62,9 @@
 		FA7C26AF2A716AF000E57D27 /* BetterRest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetterRest.swift; sourceTree = "<group>"; };
 		FA7C26B02A716AF000E57D27 /* VolumeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeCalculator.swift; sourceTree = "<group>"; };
 		FA7C26B12A716AF000E57D27 /* WeSplitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeSplitView.swift; sourceTree = "<group>"; };
+		FA8C6CC82A8FA73500713D28 /* Challenge79MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge79MainView.swift; sourceTree = "<group>"; };
+		FA8C6CCA2A8FA74300713D28 /* Challenge79Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge79Manager.swift; sourceTree = "<group>"; };
+		FA8C6CCC2A8FA75300713D28 /* Challenge79Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge79Model.swift; sourceTree = "<group>"; };
 		FA948A182A7ED2D300C94AD1 /* MissionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionsModel.swift; sourceTree = "<group>"; };
 		FA948A1A2A7ED7C000C94AD1 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		FA948A1C2A7ED94A00C94AD1 /* MissionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionsView.swift; sourceTree = "<group>"; };
@@ -188,8 +194,19 @@
 				FA7C26B02A716AF000E57D27 /* VolumeCalculator.swift */,
 				FA7C26AF2A716AF000E57D27 /* BetterRest.swift */,
 				FA48B7742A7D2AD800210DFF /* iExpense */,
+				FA8C6CC22A8F9E6A00713D28 /* Challenge7-9 */,
 			);
 			path = Apps;
+			sourceTree = "<group>";
+		};
+		FA8C6CC22A8F9E6A00713D28 /* Challenge7-9 */ = {
+			isa = PBXGroup;
+			children = (
+				FA8C6CC82A8FA73500713D28 /* Challenge79MainView.swift */,
+				FA8C6CCA2A8FA74300713D28 /* Challenge79Manager.swift */,
+				FA8C6CCC2A8FA75300713D28 /* Challenge79Model.swift */,
+			);
+			path = "Challenge7-9";
 			sourceTree = "<group>";
 		};
 		FAD27E962A7EC34A00EACF3E /* MoonShot */ = {
@@ -306,7 +323,10 @@
 				FA7C26C02A716AF000E57D27 /* BetterRest.swift in Sources */,
 				FA48B7782A7D2B5400210DFF /* iExpenseModel.swift in Sources */,
 				FA948A1D2A7ED94A00C94AD1 /* MissionsView.swift in Sources */,
+				FA8C6CCD2A8FA75300713D28 /* Challenge79Model.swift in Sources */,
 				FA48B7762A7D2B3800210DFF /* iExpenseMainView.swift in Sources */,
+				FA8C6CC92A8FA73500713D28 /* Challenge79MainView.swift in Sources */,
+				FA8C6CCB2A8FA74300713D28 /* Challenge79Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
