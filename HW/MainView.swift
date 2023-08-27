@@ -76,6 +76,12 @@ struct MainView: View {
                 }label: {
                     Text("Challenge 7-9")
                 }
+                
+                NavigationLink{
+                    CornerOrderMainView()
+                }label: {
+                    Text("CupCakes order")
+                }
             }.navigationTitle("Homework")
         }
     }
