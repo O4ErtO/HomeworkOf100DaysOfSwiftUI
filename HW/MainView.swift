@@ -78,9 +78,15 @@ struct MainView: View {
                 }
                 
                 NavigationLink{
-                    CornerOrderMainView()
+                    CornerOrderMainView(order: Order())
                 }label: {
                     Text("CupCakes order")
+                }
+                NavigationLink{
+                    MainTenView()
+                    
+                }label:{
+                    Text("RelationShip ")
                 }
             }.navigationTitle("Homework")
         }
