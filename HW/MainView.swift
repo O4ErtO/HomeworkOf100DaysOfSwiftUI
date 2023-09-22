@@ -10,6 +10,7 @@ import SwiftUI
 
 
 struct MainView: View {
+
     var body: some View {
         NavigationStack{
             Form{
@@ -68,6 +69,24 @@ struct MainView: View {
                     MoonShotView()
                 }label: {
                     Text("MoonShot")
+                }
+                NavigationLink{
+                   ListHobbies()
+                       
+                }label: {
+                    Text("Challenge 7-9")
+                }
+                
+                NavigationLink{
+                    CornerOrderMainView(order: Order())
+                }label: {
+                    Text("CupCakes order")
+                }
+                NavigationLink{
+                    MainTenView()
+                    
+                }label:{
+                    Text("RelationShip ")
                 }
             }.navigationTitle("Homework")
         }
